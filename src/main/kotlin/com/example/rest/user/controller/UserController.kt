@@ -19,18 +19,18 @@ class UserController(private val mapper: UserMapper) {
     ){
         mapper.createUser(id, name, memo)
     }
-//
-//    @PutMapping("/user/{id}")
-//    fun updateUser(
-//        @PathVariable("id") id: String,
-//        @RequestParam("name") name: String,
-//        @RequestParam("memo") memo: String
-//    ){
-//        mapper.updateUser(id, name, memo)
-//    }
-//
-//    @DeleteMapping("/user/{id}")
-//    fun deleteUser(@PathVariable("id") id: String) {
-//        mapper.deleteUser(id)
-//    }
+
+    @PostMapping("/user/{id}")
+    fun updateUser(
+        @PathVariable("id") id: String,
+        @RequestParam("name") name: String,
+        @RequestParam("memo") memo: String
+    ){
+        mapper.updateUser(id, name, memo)
+    }
+
+    @DeleteMapping("/user/{id}")
+    fun deleteUser(@PathVariable("id") id: String) {
+        mapper.deleteUser(id)
+    }
 }
