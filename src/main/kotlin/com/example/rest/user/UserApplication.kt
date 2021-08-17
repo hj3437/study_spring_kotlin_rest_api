@@ -1,4 +1,4 @@
-package com.example.rest.User
+package com.example.rest.user
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
